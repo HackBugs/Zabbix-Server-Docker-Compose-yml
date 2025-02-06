@@ -21,7 +21,7 @@ mkdir zabbix-docker && cd zabbix-docker
 
 Now, create a **docker-compose.yml** file inside this directory:  
 ```bash
-nano docker-compose.yml
+vi docker-compose.yml
 ```
 Paste your **Zabbix Docker Compose YAML configuration** into this file and save it.
 
