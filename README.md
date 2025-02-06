@@ -51,7 +51,7 @@ Once running, use the following credentials to log in:
 
 ---
 
-✅ **Zabbix Server is now running on Docker!** 🚀
+✅ **Zabbix Server is now running on Docker!** 🚀 [YouTube Video Link](https://youtu.be/6p7B6qBtnos?si=b09sJVvaLwuXX52H)
 
 
 <!--
