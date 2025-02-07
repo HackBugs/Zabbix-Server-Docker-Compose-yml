@@ -161,6 +161,7 @@ Isse **reboot ke baad bhi containers automatically start ho jayenge**.
 
 ```sh
 docker stop $(docker ps -aq)
+docker start $(docker ps -aq)
 ```
 🔹 **`docker ps -aq`** → Yeh sabhi containers ke IDs deta hai.  
 🔹 **`docker stop`** → Yeh sabhi running containers ko stop karega.  
