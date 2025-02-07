@@ -27,8 +27,8 @@
 ## **3️⃣ Zabbix Web Interface (`zabbix-web`)**  
 📌 **Kaam:** **Zabbix ka GUI (Graphical Interface) hai jisme tu browser me dekh sakta hai ki tumhara monitoring system kya kar raha hai.**  
 ✅ **Tu isse install kar raha hai kyunki:**  
-- Tujhe **browser se login karke live monitoring dekhni hai.**  
-- Tujhe **alerts, graphs, aur reports dekhne hain.**  
+- tumhara **browser se login karke live monitoring dekhni hai.**  
+- tumhara **alerts, graphs, aur reports dekhne hain.**  
 🛠 **Tech:** `zabbix/zabbix-web-apache-mysql`  
 
 💡 **Example:**  
@@ -59,7 +59,7 @@
 
 💡 **Example:**  
 - Tu `http://localhost:8081` pe jaake **database ke tables aur records dekh sakega.**  
-- Agar tujhe Zabbix ki koi setting directly database me change karni hai, toh **phpMyAdmin se kar sakta hai.**  
+- Agar tumhara Zabbix ki koi setting directly database me change karni hai, toh **phpMyAdmin se kar sakta hai.**  
 
 ---
 
@@ -75,7 +75,7 @@
 ---
 
 ## **✅ Ab tumhara Setup Proper Work Karega!**
-🎯 **Tujhe kya karna hai?**  
+🎯 **tumhara kya karna hai?**  
 1️⃣ `docker-compose up -d` run kar  
 2️⃣ **`http://localhost:8080`** pe jaa, login kar  
 3️⃣ **Zabbix me monitoring dekho** 🚀🔥
