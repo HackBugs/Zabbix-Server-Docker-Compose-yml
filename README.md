@@ -175,6 +175,49 @@ Agar **sabhi images** bhi delete karni ho, toh:
 docker rmi $(docker images -q)
 ```
 
+<hr>
+
+> # Passwords of **Docker Compose file** ✅  
+
+---
+
+### **🔐 MySQL (Zabbix Database)**
+| **Parameter**         | **Value**             |
+|----------------------|----------------------|
+| **Root Password**    | `root_password`      |
+| **Database Name**    | `zabbix`             |
+| **Database User**    | `zabbix`             |
+| **Database Password**| `zabbix_password`    |
+
+---
+
+### **🔐 Zabbix Server & Web Interface**
+| **Parameter**        | **Value**              |
+|----------------------|----------------------|
+| **Zabbix Admin User** | `Admin` (default)  |
+| **Zabbix Admin Password** | `zabbix` (default) |
+
+---
+
+### **🔐 phpMyAdmin (for MySQL Management)**
+| **Parameter**         | **Value**             |
+|----------------------|----------------------|
+| **MySQL Root Password** | `root_password`  |
+| **PMA Host**          | `zabbix-db`         |
+
+---
+
+## **📌 Default Login Steps**
+1️⃣ Open **Zabbix Web Interface**: `http://localhost:8080`  
+2️⃣ Login karein:  
+   - **Username:** `Admin`  
+   - **Password:** `zabbix`  
+
+3️⃣ Open **phpMyAdmin**: `http://localhost:8081`  
+   - **Username:** `root`  
+   - **Password:** `root_password`  
+
+✅ **Ab aapka setup ready hai!** 🚀🔥
 
 <!--
 
