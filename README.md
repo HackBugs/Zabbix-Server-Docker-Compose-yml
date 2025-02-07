@@ -148,7 +148,6 @@ Agar **sabhi images** bhi delete karni ho, toh:
 ```sh
 docker rmi $(docker images -q)
 ```
-🚀 Let me know agar aur koi help chahiye!
 
 
 <!--
