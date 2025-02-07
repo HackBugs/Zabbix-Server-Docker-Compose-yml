@@ -22,6 +22,10 @@ docker network inspect zabbix-net
 docker restart zabbix-db zabbix-server
 docker exec -it zabbix-server bash
 mysql -h zabbix-db -u zabbix -pzabbix_password
+
+docker-compose down
+docker-compose up -d
+docker-compose up -d --no-deps zabbix-agent
 ```
 
 > # **Zabbix Server Setup Using Docker Compose**  ✅
