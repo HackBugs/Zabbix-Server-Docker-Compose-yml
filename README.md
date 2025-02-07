@@ -11,7 +11,7 @@ ping zabbix-server
 nslookup zabbix-server
 
 docker network create zabbix-net
-
+docker logs -f zabbix-server
 ```
 
 > # **Zabbix Server Setup Using Docker Compose**  ✅
