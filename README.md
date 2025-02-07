@@ -12,6 +12,16 @@ nslookup zabbix-server
 
 docker network create zabbix-net
 docker logs -f zabbix-server
+
+docker ps | grep zabbix-server
+docker ps -a | grep zabbix-server
+docker start zabbix-server
+
+docker network connect zabbix-net zabbix-server
+docker network inspect zabbix-net
+docker restart zabbix-db zabbix-server
+docker exec -it zabbix-server bash
+mysql -h zabbix-db -u zabbix -pzabbix_password
 ```
 
 > # **Zabbix Server Setup Using Docker Compose**  ✅
