@@ -217,8 +217,6 @@ docker rmi $(docker images -q)
    - **Username:** `root`  
    - **Password:** `root_password`  
 
-✅ **Ab aapka setup ready hai!** 🚀🔥
-
 <!--
 
 1. Download Docker follow officil documentation
