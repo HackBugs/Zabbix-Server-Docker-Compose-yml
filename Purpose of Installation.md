@@ -1,6 +1,3 @@
-Bhai, tu Zabbix ka **monitoring system** setup kar raha hai Docker ke andar. Main ekdum **lame language** me samjhata hoon ki har ek component ka kaam kya hai. 😎  
-
----
 
 ## **1️⃣ Zabbix MySQL Database (`zabbix-db`)**  
 📌 **Kaam:** **Zabbix ka pura data store karega** (jaise logs, alerts, configurations, reports).  
@@ -9,7 +6,7 @@ Bhai, tu Zabbix ka **monitoring system** setup kar raha hai Docker ke andar. Mai
 - Zabbix Server aur Web Interface **isi database se data uthayenge.**  
 🛠 **Tech:** `mysql:8.0` (database engine)  
 
-💡 **Example:** Tera Zabbix monitor kar raha hai ki **server down ho gaya** ya **CPU 90% tak use ho raha hai.** Ye sab data **MySQL database me store hoga.**  
+💡 **Example:** tumhara Zabbix monitor kar raha hai ki **server down ho gaya** ya **CPU 90% tak use ho raha hai.** Ye sab data **MySQL database me store hoga.**  
 
 ---
 
@@ -22,13 +19,13 @@ Bhai, tu Zabbix ka **monitoring system** setup kar raha hai Docker ke andar. Mai
 🛠 **Tech:** `zabbix/zabbix-server-mysql`  
 
 💡 **Example:**  
-- Zabbix Server **check karega ki tera EC2 server chal raha hai ya band ho gaya.**  
+- Zabbix Server **check karega ki tumhara EC2 server chal raha hai ya band ho gaya.**  
 - Agar **server down ho gaya, toh alert bhej dega.**  
 
 ---
 
 ## **3️⃣ Zabbix Web Interface (`zabbix-web`)**  
-📌 **Kaam:** **Zabbix ka GUI (Graphical Interface) hai jisme tu browser me dekh sakta hai ki tera monitoring system kya kar raha hai.**  
+📌 **Kaam:** **Zabbix ka GUI (Graphical Interface) hai jisme tu browser me dekh sakta hai ki tumhara monitoring system kya kar raha hai.**  
 ✅ **Tu isse install kar raha hai kyunki:**  
 - Tujhe **browser se login karke live monitoring dekhni hai.**  
 - Tujhe **alerts, graphs, aur reports dekhne hain.**  
@@ -48,7 +45,7 @@ Bhai, tu Zabbix ka **monitoring system** setup kar raha hai Docker ke andar. Mai
 🛠 **Tech:** `zabbix/zabbix-agent2`  
 
 💡 **Example:**  
-- Agar tera **server ka CPU 95% tak pahunch gaya**, toh **Zabbix Agent isko detect karega.**  
+- Agar tumhara **server ka CPU 95% tak pahunch gaya**, toh **Zabbix Agent isko detect karega.**  
 - Phir **Zabbix Server ko bolega ki alert bhej do.**  
 
 ---
@@ -77,8 +74,8 @@ Bhai, tu Zabbix ka **monitoring system** setup kar raha hai Docker ke andar. Mai
 
 ---
 
-## **✅ Ab Tera Setup Proper Work Karega!**
+## **✅ Ab tumhara Setup Proper Work Karega!**
 🎯 **Tujhe kya karna hai?**  
 1️⃣ `docker-compose up -d` run kar  
 2️⃣ **`http://localhost:8080`** pe jaa, login kar  
-3️⃣ **Zabbix me monitoring dekh** 🚀🔥
+3️⃣ **Zabbix me monitoring dekho** 🚀🔥
