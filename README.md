@@ -57,6 +57,11 @@ Once running, use the following credentials to log in:
 
 > # Agar aapne laptop reboot kar diya hai, toh aapke **Docker containers stop ho gaye honge**. Aapko unko **restart** karne ke liye niche diye gaye steps follow karne honge.  ✅
 
+- **Enter Inside of Container:**
+```
+docker exec -it <container_name_or_id> bash
+```
+
 ---
 
 ## **🔄 Containers Restart Karne Ka Tarika**  
