@@ -60,6 +60,7 @@ Once running, use the following credentials to log in:
 - **Enter Inside of Container:**
 ```
 docker exec -it <container_name_or_id> bash
+docker container exec -it <container_name_or_id> bash 
 ```
 
 ---
