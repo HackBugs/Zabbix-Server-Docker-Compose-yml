@@ -1,4 +1,4 @@
-# **Zabbix Server Setup Using Docker Compose**  
+> # **Zabbix Server Setup Using Docker Compose**  ✅
 
 ## **Step-by-Step Guide**  
 
@@ -52,6 +52,74 @@ Once running, use the following credentials to log in:
 ---
 
 ✅ **Zabbix Server is now running on Docker!** 🚀 [YouTube Video Link](https://youtu.be/6p7B6qBtnos?si=b09sJVvaLwuXX52H)
+
+<hr>
+
+> # Agar aapne laptop reboot kar diya hai, toh aapke **Docker containers stop ho gaye honge**. Aapko unko **restart** karne ke liye niche diye gaye steps follow karne honge.  ✅
+
+---
+
+## **🔄 Containers Restart Karne Ka Tarika**  
+
+### **1️⃣ Check Running Containers**  
+Sabse pehle dekho ki koi container chalu hai ya nahi:  
+```bash
+docker ps -a
+```
+Agar aapke Zabbix containers **STOPPED** dikh rahe hain, toh unko start karna hoga.
+
+---
+
+### **2️⃣ Restart All Containers from `docker-compose.yml`**  
+Agar aapne containers **docker-compose.yml** se chalaye the, toh unko wapas start karne ka best tarika ye hai:  
+```bash
+docker compose -f docker-compose.yml up -d
+```
+Yeh command **containers ko wapas start karegi** bina naye containers create kiye.
+
+---
+
+### **3️⃣ Start Containers Manually (Alternative Method)**  
+Agar aap sirf existing containers start karna chahte ho, toh yeh command run karo:  
+```bash
+docker start $(docker ps -aq)
+```
+Yeh **sab stopped containers ko wapas start** karega.
+
+Agar sirf specific containers (jaise `zabbix-server` aur `zabbix-db`) start karne hain, toh:  
+```bash
+docker start zabbix-server zabbix-db
+```
+
+---
+
+### **4️⃣ Check If Everything is Running**  
+Containers sahi se start hue ya nahi, yeh check karne ke liye:  
+```bash
+docker ps
+```
+Agar sab kuch sahi se chalu ho gaya hai, toh **containers running mode me dikhne chahiye**.
+
+---
+
+## **🎯 Important: Auto-Start Enable Karna**
+Agar aap chahte ho ki **containers reboot ke baad automatically start ho jayein**, toh **restart policy** enable karo:  
+```bash
+docker update --restart unless-stopped $(docker ps -aq)
+```
+Isse **reboot ke baad bhi containers automatically start ho jayenge**.
+
+---
+
+## **✅ Final Check**
+1. **Zabbix Server Running Check**:  
+   ```bash
+   docker logs zabbix-server | tail -n 20
+   ```
+2. **Zabbix Web Access**:  
+   Browser me `http://localhost:8080` open karke dekho.
+
+---
 
 
 <!--
