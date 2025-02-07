@@ -9,6 +9,9 @@ sudo firewall-cmd --list-ports
 sudo netstat -tulnp | grep 10051
 ping zabbix-server
 nslookup zabbix-server
+
+docker network create zabbix-net
+
 ```
 
 > # **Zabbix Server Setup Using Docker Compose**  ✅
