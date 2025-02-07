@@ -125,7 +125,30 @@ Isse **reboot ke baad bhi containers automatically start ho jayenge**.
 2. **Zabbix Web Access**:  
    Browser me `http://localhost:8080` open karke dekho.
 
+<hr>
+
+> # Agar **sabhi containers ko down (stop) karna hai**, toh yeh command use karo:  ✅
+
+```sh
+docker stop $(docker ps -aq)
+```
+🔹 **`docker ps -aq`** → Yeh sabhi containers ke IDs deta hai.  
+🔹 **`docker stop`** → Yeh sabhi running containers ko stop karega.  
+
 ---
+
+### **Agar Sabhi Containers Ko Delete Karna Hai (Optional)**
+Agar **sabhi containers ko remove (delete) bhi karna hai**, toh:  
+```sh
+docker rm $(docker ps -aq)
+```
+⚠️ **Warning:** Yeh **sabhi stopped containers** delete kar dega.  
+
+Agar **sabhi images** bhi delete karni ho, toh:  
+```sh
+docker rmi $(docker images -q)
+```
+🚀 Let me know agar aur koi help chahiye!
 
 
 <!--
