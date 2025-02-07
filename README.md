@@ -178,6 +178,7 @@ docker rm $(docker ps -aq)
 Agar **sabhi images** bhi delete karni ho, toh:  
 ```sh
 docker rmi $(docker images -q)
+docker rmi -f $(docker images -q)
 ```
 
 <hr>
