@@ -6,7 +6,7 @@
 - Zabbix Server aur Web Interface **isi database se data uthayenge.**  
 🛠 **Tech:** `mysql:8.0` (database engine)  
 
-💡 **Example:** tumhara Zabbix monitor kar raha hai ki **server down ho gaya** ya **CPU 90% tak use ho raha hai.** Ye sab data **MySQL database me store hoga.**  
+💡 **Example:** tumhe Zabbix monitor kar raha hai ki **server down ho gaya** ya **CPU 90% tak use ho raha hai.** Ye sab data **MySQL database me store hoga.**  
 
 ---
 
@@ -19,16 +19,16 @@
 🛠 **Tech:** `zabbix/zabbix-server-mysql`  
 
 💡 **Example:**  
-- Zabbix Server **check karega ki tumhara EC2 server chal raha hai ya band ho gaya.**  
+- Zabbix Server **check karega ki tumhe EC2 server chal raha hai ya band ho gaya.**  
 - Agar **server down ho gaya, toh alert bhej dega.**  
 
 ---
 
 ## **3️⃣ Zabbix Web Interface (`zabbix-web`)**  
-📌 **Kaam:** **Zabbix ka GUI (Graphical Interface) hai jisme tu browser me dekh sakta hai ki tumhara monitoring system kya kar raha hai.**  
+📌 **Kaam:** **Zabbix ka GUI (Graphical Interface) hai jisme tu browser me dekh sakta hai ki tumhe monitoring system kya kar raha hai.**  
 ✅ **Tu isse install kar raha hai kyunki:**  
-- tumhara **browser se login karke live monitoring dekhni hai.**  
-- tumhara **alerts, graphs, aur reports dekhne hain.**  
+- tumhe **browser se login karke live monitoring dekhni hai.**  
+- tumhe **alerts, graphs, aur reports dekhne hain.**  
 🛠 **Tech:** `zabbix/zabbix-web-apache-mysql`  
 
 💡 **Example:**  
@@ -45,7 +45,7 @@
 🛠 **Tech:** `zabbix/zabbix-agent2`  
 
 💡 **Example:**  
-- Agar tumhara **server ka CPU 95% tak pahunch gaya**, toh **Zabbix Agent isko detect karega.**  
+- Agar tumhe **server ka CPU 95% tak pahunch gaya**, toh **Zabbix Agent isko detect karega.**  
 - Phir **Zabbix Server ko bolega ki alert bhej do.**  
 
 ---
@@ -59,7 +59,7 @@
 
 💡 **Example:**  
 - Tu `http://localhost:8081` pe jaake **database ke tables aur records dekh sakega.**  
-- Agar tumhara Zabbix ki koi setting directly database me change karni hai, toh **phpMyAdmin se kar sakta hai.**  
+- Agar tumhe Zabbix ki koi setting directly database me change karni hai, toh **phpMyAdmin se kar sakta hai.**  
 
 ---
 
@@ -74,8 +74,8 @@
 
 ---
 
-## **✅ Ab tumhara Setup Proper Work Karega!**
-🎯 **tumhara kya karna hai?**  
+## **✅ Ab tumhe Setup Proper Work Karega!**
+🎯 **tumhe kya karna hai?**  
 1️⃣ `docker-compose up -d` run kar  
 2️⃣ **`http://localhost:8080`** pe jaa, login kar  
 3️⃣ **Zabbix me monitoring dekho** 🚀🔥
