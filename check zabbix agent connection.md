@@ -1,4 +1,4 @@
-### ✅ **Zabbix Agent Port 10050 Listen Kar Raha Hai, But Connection Issue Hai**  
+> ## ✅ **Zabbix Agent Port 10050 Listen Kar Raha Hai, But Connection Issue Hai**  
 Aapke netstat output se confirm ho gaya hai ki **Zabbix Agent 10050 port pe listen kar raha hai**, lekin phir bhi **Zabbix Server se connect nahi ho raha**.  
 
 ---
@@ -82,3 +82,67 @@ sudo firewall-cmd --reload
 ✅ **Agent ka `zabbix_agent2.conf` me Server IP ya name change karo**  
 ✅ **Agent ko ek hi Docker network me daalo jo Server use kar raha hai**  
 ✅ **Server se `zabbix_get -s 172.x.x.x -p 10050 -k agent.ping` run karo**  
+
+<hr>
+
+> ## **🚀 Zabbix Agent 2 Configuration Missing Important Settings!**  
+
+Aapke **`zabbix_agent2.conf`** me **`Server` aur `ServerActive` parameters missing hain**, is wajah se agent Zabbix Server se connect nahi ho raha.  
+
+---
+
+## **✅ 1️⃣ Configuration File Update Karo**  
+Agent container ke andar configuration file **edit** karo:  
+```bash
+docker exec -it zabbix-agent vi /etc/zabbix/zabbix_agent2.conf
+```
+🔹 **File ke end me yeh lines add karo:**  
+```ini
+Server=172.18.0.2  # Ya aapke Zabbix Server ka IP  
+ServerActive=172.18.0.2
+ListenPort=10050
+```
+  
+---
+
+## **✅ 2️⃣ Agent Restart Karo**  
+Changes save karne ke baad agent ko restart karo:  
+```bash
+docker restart zabbix-agent
+```
+
+---
+
+## **✅ 3️⃣ Zabbix Server Se Agent Ping Karo**  
+```bash
+docker exec -it zabbix-server ping -c 4 172.18.0.3
+```
+✔ **Agar ping successful hai**, toh agent reachable hai.  
+❌ **Agar fail ho raha hai, toh network issue ho sakta hai.**  
+
+---
+
+## **✅ 4️⃣ Zabbix Server Se Port Check Karo**  
+```bash
+docker exec -it zabbix-server nc -zv 172.18.0.3 10050
+```
+✔ **Agar "succeeded" aata hai**, toh agent ka port accessible hai.  
+❌ **Agar "connection refused" aata hai, toh `ListenPort=10050` check karo.**  
+
+---
+
+## **✅ 5️⃣ Zabbix Get Command Se Test Karo**  
+```bash
+zabbix_get -s 172.18.0.3 -p 10050 -k agent.ping
+```
+✔ **Agar `1` aata hai**, toh agent successfully connect ho gaya hai.  
+❌ **Agar error aata hai, toh `docker logs zabbix-agent` ka output bhejo.**  
+
+---
+
+### **📌 Final Steps:**
+✔ **Configuration file update karo (`Server=172.18.0.2`)**  
+✔ **Agent ko restart karo (`docker restart zabbix-agent`)**  
+✔ **Server se agent ko ping karo (`ping -c 4 172.18.0.3`)**  
+✔ **Server se agent ka port check karo (`nc -zv 172.18.0.3 10050`)**  
+✔ **Zabbix Get se test karo (`zabbix_get -s 172.18.0.3 -p 10050 -k agent.ping`)**  
