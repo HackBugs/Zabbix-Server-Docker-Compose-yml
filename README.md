@@ -31,6 +31,22 @@ docker-compose up -d
 docker-compose up -d --no-deps zabbix-agent
 ```
 
+## CMD for Zabbix for Docker 
+```
+vi /etc/zabbix/zabbix_agent2_active_checks.conf
+agent - 172.18.0.4
+server - 172.18.0.2
+
+
+docker cp /var/lib/zabbix/zabbix_agent2_active_checks.conf /tmp/
+docker cp zabbix-agent:/var/lib/zabbix/zabbix_agent2_active_checks.conf /tmp/
+docker cp zabbix-agent:/etc/zabbix/zabbix_agent2_active_checks.conf /tmp/
+vi /tmp/zabbix_agent2_active_checks.conf
+
+docker cp /tmp/zabbix_agent2_active_checks.conf zabbix-agent:/etc/zabbix/zabbix_agent2_active_checks.conf
+docker exec -it zabbix-agent cat /etc/zabbix/zabbix_agent2.conf | grep "Server="
+```
+
 > # **Zabbix Server Setup Using Docker Compose**  ✅
 
 ## **Step-by-Step Guide**  
