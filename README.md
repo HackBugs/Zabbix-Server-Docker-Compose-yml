@@ -1,4 +1,6 @@
 
+- [community-templates](https://github.com/zabbix/community-templates)
+
 ```
 sudo firewall-cmd --add-service={http,https} --permanent
 sudo firewall-cmd --add-port=10050/tcp --permanent
