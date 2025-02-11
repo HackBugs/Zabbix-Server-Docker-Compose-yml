@@ -1,5 +1,6 @@
 
-- [community-templates](https://github.com/zabbix/community-templates)
+- [Zabbix community-templates](https://github.com/zabbix/community-templates)
+- [Zabbix templates](https://git.zabbix.com/projects/ZBX/repos/zabbix/browse/templates/)
 
 ```
 sudo firewall-cmd --add-service={http,https} --permanent
